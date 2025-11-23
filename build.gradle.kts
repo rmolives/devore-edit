@@ -40,7 +40,6 @@ dependencies {
     implementation(compose.components.uiToolingPreview)
     implementation(compose.desktop.currentOs)
     implementation(compose.materialIconsExtended)
-    implementation("com.neoutils.highlight:highlight-compose:2.3.0")
 }
 
 compose.resources {
