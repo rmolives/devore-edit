@@ -3,10 +3,9 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import proguard.gradle.ProGuardTask
 
 plugins {
-    kotlin("jvm") version "2.0.0"
-    kotlin("plugin.serialization") version "1.8.10"
-    kotlin("plugin.compose") version "2.0.0"
-    id("org.jetbrains.compose") version "1.6.11"
+    kotlin("jvm") version "2.2.21"
+    kotlin("plugin.compose") version "2.2.21"
+    id("org.jetbrains.compose") version "1.9.3"
 }
 
 val appVersion = "1.0.0"
@@ -22,7 +21,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.guardsquare:proguard-gradle:7.5.0")
+        classpath("com.guardsquare:proguard-gradle:7.8.1")
     }
 }
 
@@ -41,6 +40,11 @@ dependencies {
     implementation(compose.components.uiToolingPreview)
     implementation(compose.desktop.currentOs)
     implementation(compose.materialIconsExtended)
+    implementation("com.neoutils.highlight:highlight-compose:2.3.0")
+}
+
+compose.resources {
+    generateResClass = always
 }
 
 tasks.jar {
