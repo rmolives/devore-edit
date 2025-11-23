@@ -39,8 +39,6 @@ fun main() {
             position = WindowPosition(Alignment.Center),
             size = DpSize(1300.dp, 950.dp)
         )
-
-
         Window(
             title = "Devore Edit",
             icon = painterResource("drawable/logo.png"),
