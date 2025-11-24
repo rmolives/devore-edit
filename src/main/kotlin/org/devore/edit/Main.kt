@@ -87,37 +87,42 @@ fun Head(state: WindowState) {
             text = "Devore Edit",
             style = TextStyle(fontSize = 20.sp, fontWeight = FontWeight.Bold)
         )
-        Row(
-            modifier = Modifier.fillMaxSize(),
-            horizontalArrangement = Arrangement.End,
-            verticalAlignment = Alignment.CenterVertically
+        Operation(state)
+    }
+}
+
+@Composable
+fun Operation(state: WindowState) {
+    Row(
+        modifier = Modifier.fillMaxSize(),
+        horizontalArrangement = Arrangement.End,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        TextButton(
+            onClick = { state.isMinimized = state.isMinimized.not() },
+            colors = ButtonDefaults.textButtonColors(contentColor = Color.Transparent)
         ) {
-            TextButton(
-                onClick = { state.isMinimized = state.isMinimized.not() },
-                colors = ButtonDefaults.textButtonColors(contentColor = Color.Transparent)
-            ) {
-                Text(
-                    text = "—",
-                    color = Color.Black,
-                    style = TextStyle(
-                        fontSize = 25.sp,
-                        fontWeight = FontWeight.Bold
-                    )
+            Text(
+                text = "—",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold
                 )
-            }
-            TextButton(
-                onClick = { exitProcess(0) },
-                colors = ButtonDefaults.textButtonColors(contentColor = Color.Transparent)
-            ) {
-                Text(
-                    text = "X",
-                    color = Color.Black,
-                    style = TextStyle(
-                        fontSize = 25.sp,
-                        fontWeight = FontWeight.Bold
-                    )
+            )
+        }
+        TextButton(
+            onClick = { exitProcess(0) },
+            colors = ButtonDefaults.textButtonColors(contentColor = Color.Transparent)
+        ) {
+            Text(
+                text = "X",
+                color = Color.Black,
+                style = TextStyle(
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold
                 )
-            }
+            )
         }
     }
 }
