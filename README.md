@@ -5,8 +5,4 @@
 
 ## The stack
 
-- 🌐 [Ktor](https://github.com/ktorio/ktor); for networking
 - 🧩 [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform); for shared UI
-- 📦 [Kotlinx Serialization](https://github.com/Kotlin/kotlinx.serialization); for content negotiation
-- 🗃️ [KStore](https://github.com/xxfast/KStore); for storage
-- 🔊 [Kotlin Logging](https://github.com/oshai/kotlin-logging) + [Logback](https://github.com/qos-ch/logback); for logging
